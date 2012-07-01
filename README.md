@@ -76,7 +76,7 @@ Finally, here's an example of how to use the gem in a Rails application:
 
 *In your view:*
 ```erb
-<%= @route.gcmap(:width => "600") %>
+<%= image_tag @route.gcmap(:width => "600") %>
 ```
 
 #### Notes:
