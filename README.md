@@ -44,8 +44,10 @@ another_route.gcmap # => Returns an image map URL for the layover route LFST-LSZ
 ```
 
 The resulting image size and look can be customized by passing an optional hash of arguments to the
-`.gcmap` method. Customizable attributes include *width, height* and *terrain* (toggle satelite terrain overlay).
-These options can be combined in any way or omitted entirely. Examples:
+`.gcmap` method. Customizable attributes include *width, height, terrain (toggle satelite terrain
+ overlay), city label and airport name label*.
+Width, height and terrain can be combined in any way or omitted entirely. City label ad Airport name
+label are mutually exclusive. Examples:
 
 ```ruby
 # Passing width only (default is 720px):
@@ -65,6 +67,17 @@ route.gcmap(:terrain => true) # => Returns an image map URL with terrain overlay
 
 # Setting width, height and enabling terrain overlay:
 "egll-lowi".gcmap(:width => 800, :height => 400, :terrain => true) # => Returns an image map URL with set width, height and terrain
+
+# Setting width, height, enabling terrain overlay and disabling the city labels:
+"egll-lowi".gcmap(:width => 800, :height=>400, :terrain=>true, :city=>false) # => Returns an image map URL with set width, height and terrain, with city labels disabled
+
+# Setting the map to display the airports' names instead of the ICAO/IATA codes
+route = "egll-lowi"
+route.gcmap(:airport_name => true) # => Returns an image map URL with airport names displayed
+
+# Setting the map to display the airports' names and a terrain overlay
+route = "egll-lowi"
+route.gcmap(:airport_name => true, :terrain => true) # => Returns an image map URL with airport names and terrain displayed
 ```
 
 Finally, here's an example of how to use the gem in a Rails application:
@@ -86,6 +99,17 @@ Finally, here's an example of how to use the gem in a Rails application:
 * layover routes that chain multiple airports (more than 2) are also supported
 * default image parameters are: width 720px, width: 360px, terrain not shown
 * when passing the `width` and `height` hash options the values can be put in quotes or not, either way works
+* `city` label and `airport_name` label options are mutually exclusive, i.e. you can either have the ICAO/IATA code with optional city name OR the Airport name
+
+## Changelog
+
+### v. 0.2 July 2nd 2012
+
+* [Enhancement] Maps now show the user input code (ICAO or IATA) instead of ICAO only
+* [Feature] New hash option :city to toggle city labels on or off (see Usage)
+* [Feature] New hash option :airport_name to toggle airport name labels on or off (see Usage)
+
+
 
 ## Contributing
 
