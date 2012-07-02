@@ -47,7 +47,17 @@ The resulting image size and look can be customized by passing an optional hash 
 `.gcmap` method. Customizable attributes include *width, height, terrain (toggle satelite terrain
  overlay), city label and airport name label*.
 Width, height and terrain can be combined in any way or omitted entirely. City label ad Airport name
-label are mutually exclusive. Examples:
+label are mutually exclusive.
+
+### Defaults
+
+* width: 720px
+* height: 360px
+* terrain: off
+* city label: on
+* airport name label: off
+
+### Examples:
 
 ```ruby
 # Passing width only (default is 720px):
@@ -106,8 +116,8 @@ Finally, here's an example of how to use the gem in a Rails application:
 ### v. 0.2 July 2nd 2012
 
 * [Enhancement] Maps now show the user input code (ICAO or IATA) instead of ICAO only
-* [Feature] New hash option :city to toggle city labels on or off (see Usage)
-* [Feature] New hash option :airport_name to toggle airport name labels on or off (see Usage)
+* [Feature] New hash option `:city` to toggle city labels on or off (see [Usage](#usage))
+* [Feature] New hash option `:airport_name` to toggle airport name labels on or off (see [Usage](#usage))
 
 
 
