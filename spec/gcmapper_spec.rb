@@ -82,7 +82,7 @@ describe String do
 
     it "should allow random combination of arguments" do
       route = "egll-lowi"
-      route.gcmap(:width=>800, :height=>400, :terrain=>true).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=bm&MR=120&MX=800x400&PM=b:disc7%2b%22%25i%25+%28N%22")
+      route.gcmap(:width => 800, :height=>400, :terrain=>true).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=bm&MR=120&MX=800x400&PM=b:disc7%2b%22%25i%25+%28N%22")
       route.gcmap(:width=>800, :terrain => true).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=bm&MR=120&MX=800x360&PM=b:disc7%2b%22%25i%25+%28N%22")
       route.gcmap(:height=>800, :terrain=>true).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=bm&MR=120&MX=720x800&PM=b:disc7%2b%22%25i%25+%28N%22")
     end
