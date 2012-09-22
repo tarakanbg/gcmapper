@@ -65,6 +65,13 @@ describe String do
       route.gcmap(:width => 800, :height => 400).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=wls&MR=120&MX=800x400&PM=b:disc7%2b\"%25U%25+%28N\"")
     end
 
+    it "should interpret non-default simplified width and height as variables" do
+      route = "egll-lowi"
+      w = 400
+      h = 400
+      route.gcmap(:width => w, :height => h).should eq("http://www.gcmap.com/map?P=egll-lowi%0d%0a&MS=wls&MR=120&MX=400x400&PM=b:disc7%2b\"%25U%25+%28N\"")
+    end
+
     it "should support layover routes" do
       route = "egll-lowi-lqsa"
       route.gcmap.should eq("http://www.gcmap.com/map?P=egll-lowi-lqsa%0d%0a&MS=wls&MR=120&MX=720x360&PM=b:disc7%2b\"%25U%25+%28N\"")
