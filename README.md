@@ -113,6 +113,11 @@ Finally, here's an example of how to use the gem in a Rails application:
 
 ## Changelog
 
+### v. 0.3.1 September 23rd 2012
+
+* More test cases
+* Typos
+
 ### v. 0.3 August 27th 2012
 
 * Updated for [vatsim_online](https://rubygems.org/gems/vatsim_online) compatibility
