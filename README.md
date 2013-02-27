@@ -1,4 +1,4 @@
-# GCMapper [![Build Status](https://secure.travis-ci.org/tarakanbg/gcmapper.png)](http://travis-ci.org/tarakanbg/gcmapper)
+# GCMapper 
 
 A Ruby gem for easy generation of Great Circle Map images between 2 or more airports.
 The gem provides an API for constructing the image URLs, the maps themselves are pulled from
@@ -6,6 +6,15 @@ The gem provides an API for constructing the image URLs, the maps themselves are
 
 The look and size of the map image can be customized by passing an optional hash of arguments, as explained
 in the [Usage section](#usage).
+
+[![Build Status](https://secure.travis-ci.org/tarakanbg/gcmapper.png?branch=master)](http://travis-ci.org/tarakanbg/gcmapper)
+[![Gemnasium](https://gemnasium.com/tarakanbg/gcmapper.png?travis)](https://gemnasium.com/tarakanbg/gcmapper)
+[![Gem Version](https://badge.fury.io/rb/gcmapper.png)](http://badge.fury.io/rb/gcmapper)
+[![Code Climate](https://codeclimate.com/github/tarakanbg/gcmapper.png)](https://codeclimate.com/github/tarakanbg/gcmapper)
+
+## Requirements
+
+[Ruby 1.9.3](http://www.ruby-lang.org/en/downloads/) or higher | **Supports Ruby 2.0!**
 
 ## Installation
 
@@ -113,6 +122,10 @@ Finally, here's an example of how to use the gem in a Rails application:
 
 ## Changelog
 
+### v. 0.4.0 February 27rd 2013
+
+* Ruby 2.0 support
+
 ### v. 0.3.1 September 23rd 2012
 
 * More test cases
@@ -133,12 +146,13 @@ Finally, here's an example of how to use the gem in a Rails application:
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+4. Make sure all tests pass!
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
 ## Credits
 
-Copyright © 2012 [Svilen Vassilev](http://about.me/svilen)
+Copyright © 2013 [Svilen Vassilev](http://svilen.rubystudio.net)
 
 *If you find my work useful or time-saving, you can endorse it or buy me a beer:*
 

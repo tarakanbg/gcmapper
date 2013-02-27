@@ -1,0 +1,3 @@
+  # disc + user code             b:disc7%2b%25U
+  # disc + user_code + city      b:disc7%2b\"%25U%25+%28N\"
+  # disc + airport_name          b:disc7+%A
